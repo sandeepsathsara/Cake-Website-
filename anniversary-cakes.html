@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dinu Cake | Birthday Cakes</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Raleway&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --primary: #ff6b81;
+      --bg: #fff9f5;
+      --card-bg: #fff;
+      --text: #3a2f2f;
+      --accent: #ffe2db;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Raleway', sans-serif;
+      background: linear-gradient(to right, #fff9f5, #ffece6);
+      color: var(--text);
+      line-height: 1.6;
+    }
+
+    header {
+      background-color: var(--accent);
+      padding: 16px 24px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+    }
+
+    .logo {
+      font-size: 26px;
+      color: var(--primary);
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 700;
+      text-decoration: none;
+    }
+
+    nav {
+      display: flex;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+
+    nav a {
+      color: #5b4a48;
+      font-weight: 600;
+      font-size: 15px;
+      text-decoration: none;
+      transition: 0.3s;
+    }
+
+    nav a:hover {
+      color: var(--primary);
+    }
+
+    .section {
+      padding: 40px 16px;
+      text-align: center;
+    }
+
+    .section h2 {
+      font-size: 30px;
+      margin-bottom: 30px;
+      color: var(--primary);
+      font-family: 'Montserrat', sans-serif;
+    }
+
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 20px;
+      padding: 0 8px;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .card {
+      background: var(--card-bg);
+      border-radius: 16px;
+      box-shadow: 0 4px 16px rgba(255, 107, 107, 0.15);
+      padding: 14px;
+      transition: 0.3s ease;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 12px 30px rgba(255, 107, 107, 0.25);
+    }
+
+    .card img {
+      width: 100%;
+      border-radius: 12px;
+      margin-bottom: 14px;
+      aspect-ratio: 1 / 1;
+      object-fit: cover;
+    }
+
+    .card h3 {
+      color: var(--primary);
+      font-size: 18px;
+      margin-bottom: 8px;
+      font-weight: bold;
+    }
+
+    .card p {
+      color: #6f5b54;
+      font-size: 14px;
+      text-align: center;
+    }
+
+    footer {
+      background: var(--accent);
+      padding: 20px;
+      text-align: center;
+      font-size: 13px;
+      color: #7b665e;
+      margin-top: 40px;
+    }
+
+    @media (max-width: 480px) {
+      header {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      nav {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+        margin-top: 10px;
+      }
+
+      .section h2 {
+        font-size: 24px;
+      }
+
+      .card h3 {
+        font-size: 16px;
+      }
+
+      .card p {
+        font-size: 13px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <a href="index.html" class="logo">Dinu Cake</a>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="cakes.html">Cakes</a>
+      <a href="birthday.html">Birthday</a>
+      <a href="anniversary-cakes.html">Anniversary</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
+
+<section class="section">
+  <h2>Anniversary Cakes</h2>
+  <div class="cards">
+
+    <div class="card">
+      <img src="assets/anniversary1.jpg" alt="Elegant Rosette Cake">
+      <h3>Elegant Rosette</h3>
+      <p>Classic rosette design in soft pinks and whites, perfect for celebrations.</p>
+    </div>
+    <div class="card">
+      <img src="assets/anniversary2.jpg" alt="Golden Celebration Cake">
+      <h3>Golden Celebration</h3>
+      <p>Luxurious gold accents with rich vanilla layers to mark special moments.</p>
+    </div>
+    <div class="card">
+      <img src="assets/anniversary3.jpg" alt="Red Velvet Romance Cake">
+      <h3>Red Velvet Romance</h3>
+      <p>Deep red velvet cake with cream cheese frosting, full of love and flavor.</p>
+    </div>
+    <div class="card">
+      <img src="assets/anniversary4.jpg" alt="Champagne Delight Cake">
+      <h3>Champagne Delight</h3>
+      <p>A sophisticated cake with subtle champagne flavor and delicate decorations.</p>
+    </div>
+    <div class="card">
+      <img src="assets/anniversary5.jpg" alt="Pearl Elegance Cake">
+      <h3>Pearl Elegance</h3>
+      <p>White cake adorned with pearl-like edible beads for timeless grace.</p>
+    </div>
+    <div class="card">
+      <img src="assets/anniversary6.jpg" alt="Chocolate Lace Cake">
+      <h3>Chocolate Lace</h3>
+      <p>Decadent chocolate with intricate lace detailing — perfect for anniversaries.</p>
+    </div>
+    <div class="card">
+      <img src="assets/anniversary7.jpg" alt="Lavender Dreams Cake">
+      <h3>Lavender Dreams</h3>
+      <p>Light lavender-colored cake with floral accents, subtle and romantic.</p>
+    </div>
+    <div class="card">
+      <img src="assets/anniversary8.jpg" alt="Classic White Cake">
+      <h3>Classic White</h3>
+      <p>Simple yet elegant white cake with fresh cream and delicate flowers.</p>
+    </div>
+    <div class="card">
+      <img src="assets/anniversary1.jpg" alt="Elegant Rosette Cake">
+      <h3>Elegant Rosette</h3>
+      <p>Classic rosette design in soft pinks and whites, perfect for celebrations.</p>
+    </div>
+    <div class="card">
+      <img src="assets/anniversary2.jpg" alt="Golden Celebration Cake">
+      <h3>Golden Celebration</h3>
+      <p>Luxurious gold accents with rich vanilla layers to mark special moments.</p>
+    </div>
+    <div class="card">
+      <img src="assets/anniversary3.jpg" alt="Red Velvet Romance Cake">
+      <h3>Red Velvet Romance</h3>
+      <p>Deep red velvet cake with cream cheese frosting, full of love and flavor.</p>
+    </div>
+    <div class="card">
+      <img src="assets/anniversary4.jpg" alt="Champagne Delight Cake">
+      <h3>Champagne Delight</h3>
+      <p>A sophisticated cake with subtle champagne flavor and delicate decorations.</p>
+    </div>
+    <div class="card">
+      <img src="assets/anniversary5.jpg" alt="Pearl Elegance Cake">
+      <h3>Pearl Elegance</h3>
+      <p>White cake adorned with pearl-like edible beads for timeless grace.</p>
+    </div>
+    <div class="card">
+      <img src="assets/anniversary6.jpg" alt="Chocolate Lace Cake">
+      <h3>Chocolate Lace</h3>
+      <p>Decadent chocolate with intricate lace detailing — perfect for anniversaries.</p>
+    </div>
+    <div class="card">
+      <img src="assets/anniversary7.jpg" alt="Lavender Dreams Cake">
+      <h3>Lavender Dreams</h3>
+      <p>Light lavender-colored cake with floral accents, subtle and romantic.</p>
+    </div>
+   
+
+  </div>
+</section>
+
+
+  <footer>
+    &copy; 2025 Dinu Cake. All rights reserved.
+  </footer>
+
+</body>
+</html>
