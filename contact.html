@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Contact Us | Dinu Cake</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Raleway&display=swap" rel="stylesheet" />
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+  <style>
+    /* Reset and base */
+    * {
+      box-sizing: border-box;
+    }
+    body {
+      font-family: 'Raleway', sans-serif;
+      background: linear-gradient(90deg, #fff9f5, #ffece6);
+      color: #3a2f2f;
+      margin: 0;
+      padding: 0;
+      line-height: 1.6;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    header {
+      background-color: #fff0e8;
+      padding: 1rem 3rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      box-shadow: 0 2px 15px rgba(58, 47, 47, 0.1);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      font-weight: 600;
+    }
+
+    .logo {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 2.25rem;
+      color: #ff6b6b;
+      font-weight: 700;
+      text-decoration: none;
+      letter-spacing: 1.2px;
+      user-select: none;
+      transition: color 0.3s ease;
+    }
+
+    .logo:hover,
+    .logo:focus {
+      color: #e55a5a;
+      outline: none;
+    }
+
+    nav {
+      display: flex;
+      gap: 2rem;
+      font-size: 1.1rem;
+    }
+
+    nav a {
+      color: #5b4a48;
+      text-decoration: none;
+      transition: color 0.3s ease;
+    }
+
+    nav a:hover,
+    nav a:focus {
+      color: #ff6b6b;
+      outline: none;
+    }
+
+    main {
+      flex-grow: 1;
+      display: flex;
+      justify-content: center;
+      padding: 3rem 1rem;
+    }
+
+    .contact-section {
+      background: #fff;
+      max-width: 600px;
+      width: 100%;
+      border-radius: 12px;
+      padding: 3rem 2.5rem;
+      box-shadow: 0 10px 30px rgba(255, 107, 107, 0.15);
+      transition: box-shadow 0.3s ease;
+    }
+
+    .contact-section:hover,
+    .contact-section:focus-within {
+      box-shadow: 0 12px 40px rgba(255, 107, 107, 0.25);
+    }
+
+    .contact-section h1 {
+      font-family: 'Montserrat', sans-serif;
+      color: #ff6b6b;
+      text-align: center;
+      margin-bottom: 2rem;
+      font-size: 2.75rem;
+      letter-spacing: 1px;
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem;
+    }
+
+    input,
+    textarea {
+      padding: 1rem;
+      border-radius: 8px;
+      border: 1.5px solid #ccc;
+      font-size: 1rem;
+      font-family: inherit;
+      transition: border-color 0.3s ease, box-shadow 0.3s ease;
+      resize: vertical;
+      min-height: 3rem;
+    }
+
+    input:focus,
+    textarea:focus {
+      border-color: #ff6b6b;
+      box-shadow: 0 0 8px rgba(255, 107, 107, 0.4);
+      outline: none;
+    }
+
+    textarea {
+      min-height: 120px;
+      max-height: 250px;
+    }
+
+    button {
+      background-color: #ff6b6b;
+      color: #fff;
+      border: none;
+      padding: 1rem;
+      border-radius: 10px;
+      font-weight: 700;
+      font-size: 1.125rem;
+      cursor: pointer;
+      transition: background-color 0.3s ease, box-shadow 0.3s ease;
+      user-select: none;
+      box-shadow: 0 5px 15px rgba(255, 107, 107, 0.3);
+    }
+
+    button:hover,
+    button:focus {
+      background-color: #e55a5a;
+      box-shadow: 0 8px 20px rgba(229, 90, 90, 0.6);
+      outline: none;
+    }
+
+    footer {
+      background: #fff0e8;
+      padding: 2rem 1rem;
+      text-align: center;
+      font-size: 0.9rem;
+      color: #7b665e;
+      user-select: none;
+      box-shadow: inset 0 1px 0 #fff9f5;
+    }
+
+    .social-icons {
+      margin-top: 1rem;
+      display: flex;
+      justify-content: center;
+      gap: 1.5rem;
+    }
+
+    .social-icons a {
+      color: #ff6b6b;
+      font-size: 1.5rem;
+      transition: color 0.3s ease;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 36px;
+      height: 36px;
+      border-radius: 50%;
+      background: rgba(255, 107, 107, 0.1);
+      box-shadow: 0 2px 8px rgba(255, 107, 107, 0.15);
+      text-decoration: none;
+    }
+
+    .social-icons a:hover,
+    .social-icons a:focus {
+      color: #e55a5a;
+      background: rgba(229, 90, 90, 0.15);
+      outline: none;
+      box-shadow: 0 3px 12px rgba(229, 90, 90, 0.4);
+    }
+
+    /* Responsive */
+    @media (max-width: 640px) {
+      header {
+        flex-direction: column;
+        padding: 1rem 1.5rem;
+        gap: 0.5rem;
+      }
+      nav {
+        gap: 1rem;
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+      .contact-section {
+        padding: 2.5rem 1.5rem;
+        max-width: 90vw;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <a href="index.html" class="logo" tabindex="0">Dinu Cake</a>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="cakes.html">Cakes</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="contact-section" aria-labelledby="contactTitle">
+      <h1 id="contactTitle">Contact Us</h1>
+      <form id="contactForm" novalidate>
+        <label for="name" class="sr-only">Your Name</label>
+        <input type="text" id="name" name="name" placeholder="Your Name" required aria-required="true" />
+
+        <label for="email" class="sr-only">Your Email</label>
+        <input type="email" id="email" name="email" placeholder="Your Email" required aria-required="true" />
+
+        <label for="phone" class="sr-only">Your Phone Number</label>
+        <input type="tel" id="phone" name="phone" placeholder="Your Phone Number" required aria-required="true" pattern="[\d\s+\-()]{6,}" title="Please enter a valid phone number" />
+
+        <label for="message" class="sr-only">Your Message</label>
+        <textarea id="message" name="message" placeholder="Your Message..." required aria-required="true"></textarea>
+
+        <button type="submit" aria-label="Send message via WhatsApp">Send via WhatsApp</button>
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    &copy; 2025 Dinu Cake. All rights reserved.
+    <div class="social-icons" role="list" aria-label="Social media links">
+      <a href="https://facebook.com/yourpage" target="_blank" rel="noopener" title="Facebook" role="listitem" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+      <a href="https://youtube.com/yourchannel" target="_blank" rel="noopener" title="YouTube" role="listitem" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+      <a href="https://wa.me/94763561887" target="_blank" rel="noopener" title="WhatsApp" role="listitem" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+    </div>
+  </footer>
+
+  <script>
+    // Accessibility helper: hide labels but still accessible
+    const style = document.createElement('style');
+    style.textContent = `
+      .sr-only {
+        position: absolute;
+        width: 1px;
+        height: 1px;
+        padding: 0;
+        margin: -1px;
+        overflow: hidden;
+        clip: rect(0,0,0,0);
+        white-space: nowrap;
+        border: 0;
+      }
+    `;
+    document.head.append(style);
+
+    document.getElementById("contactForm").addEventListener("submit", function (e) {
+      e.preventDefault();
+
+      const form = e.target;
+      if (!form.checkValidity()) {
+        form.reportValidity();
+        return;
+      }
+
+      const name = form.name.value.trim();
+      const email = form.email.value.trim();
+      const phone = form.phone.value.trim();
+      const message = form.message.value.trim();
+
+      const whatsappNumber = "94763561887"; // Replace with your WhatsApp number (no +, no leading zeros)
+      const whatsappMessage = 
+        `Hello Dinu Cake!%0A%0A*Name:* ${name}%0A*Email:* ${email}%0A*Phone:* ${phone}%0A*Message:* ${message}`;
+      const whatsappURL = `https://wa.me/${94763561887}?text=${encodeURIComponent(whatsappMessage)}`;
+
+      window.open(whatsappURL, "_blank");
+    });
+  </script>
+
+</body>
+</html>
