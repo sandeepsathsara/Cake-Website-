@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dinu Cake | Home</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Raleway&display=swap" rel="stylesheet">
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Raleway', sans-serif;
+      background: linear-gradient(to right, #fff9f5, #ffece6);
+      color: #3a2f2f;
+      line-height: 1.6;
+      overflow-x: hidden;
+    }
+
+    a {
+      text-decoration: none;
+    }
+
+    .btn {
+      padding: 12px 28px;
+      border-radius: 12px;
+      font-weight: 700;
+      cursor: pointer;
+      font-size: 16px;
+      border: none;
+      transition: all 0.3s ease;
+      box-shadow: 0 5px 15px rgba(255, 90, 54, 0.35);
+    }
+
+    .btn.order {
+      background-color: #ff6b6b;
+      color: #fff;
+      box-shadow: 0 8px 20px rgba(255, 107, 107, 0.6);
+    }
+
+    .btn.order:hover {
+      background-color: #e55a5a;
+      transform: translateY(-3px);
+    }
+
+    .btn.menu {
+      background-color: transparent;
+      border: 2px solid #ff6b6b;
+      color: #ff6b6b;
+    }
+
+    .btn.menu:hover {
+      background-color: #ff6b6b;
+      color: white;
+      transform: translateY(-3px);
+    }
+
+    header {
+      background-color: #fff0e8;
+      padding: 20px 50px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      box-shadow: 0 2px 15px rgba(58, 47, 47, 0.1);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+
+    .logo {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 36px;
+      color: #ff6b6b;
+      font-weight: 700;
+    }
+
+    nav {
+      display: flex;
+      gap: 32px;
+    }
+
+    nav a {
+      color: #5b4a48;
+      font-weight: 600;
+      font-size: 18px;
+      position: relative;
+    }
+
+    nav a:hover {
+      color: #ff6b6b;
+    }
+
+    .hero {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+      padding: 80px 30px;
+      background: linear-gradient(135deg, #fff4f0 0%, #ffe7dd 100%);
+      gap: 40px;
+      text-align: center;
+    }
+
+    .hero-text h1 {
+      font-size: 56px;
+      font-family: 'Montserrat', sans-serif;
+      color: #ff6b6b;
+      margin-bottom: 20px;
+    }
+
+    .hero-text p {
+      font-size: 20px;
+      color: #7b665e;
+      margin-bottom: 30px;
+    }
+
+    .hero-buttons {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+
+    .hero-image img {
+      width: 420px;
+      max-width: 90vw;
+      aspect-ratio: 4 / 3;
+      object-fit: cover;
+      border-radius: 16px;
+      box-shadow: 0 12px 30px rgba(255, 107, 107, 0.25);
+      transition: transform 0.4s ease;
+    }
+
+    .hero-image img:hover {
+      transform: scale(1.03);
+    }
+
+    .section {
+      padding: 60px 30px;
+      text-align: center;
+    }
+
+    .section h2 {
+      font-size: 42px;
+      color: #ff6b6b;
+      font-family: 'Montserrat', sans-serif;
+      margin-bottom: 40px;
+    }
+
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 25px;
+      padding: 0 10px;
+    }
+
+    .card {
+      background: #fff;
+      border-radius: 20px;
+      box-shadow: 0 6px 22px rgba(255, 107, 107, 0.2);
+      padding: 20px;
+      transition: all 0.3s ease;
+      cursor: pointer;
+      text-align: center;
+    }
+
+    .card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 16px 30px rgba(255, 107, 107, 0.3);
+    }
+
+    .card img {
+      width: 100%;
+      aspect-ratio: 1/1;
+      object-fit: cover;
+      border-radius: 12px;
+      margin-bottom: 16px;
+    }
+
+    .card h3 {
+      color: #ff6b6b;
+      font-size: 22px;
+      margin-bottom: 10px;
+    }
+
+    .card p {
+      color: #6f5b54;
+      font-size: 15px;
+    }
+
+    .category-section {
+      padding: 60px 30px;
+      background-color: #fff9f5;
+      text-align: center;
+    }
+
+    .category-section h2 {
+      font-size: 42px;
+      color: #ff6b6b;
+      font-family: 'Montserrat', sans-serif;
+      margin-bottom: 40px;
+    }
+
+    .category-cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 20px;
+      padding: 0 10px;
+    }
+
+    .category-card {
+      background: #fff;
+      border-radius: 16px;
+      box-shadow: 0 6px 22px rgba(255, 107, 107, 0.15);
+      padding: 20px;
+      cursor: pointer;
+      text-align: center;
+      transition: all 0.3s ease;
+      text-decoration: none;
+      color: #3a2f2f;
+    }
+
+    .category-card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 16px 30px rgba(255, 107, 107, 0.25);
+    }
+
+    .category-card img {
+      width: 100%;
+      max-height: 180px;
+      object-fit: cover;
+      border-radius: 12px;
+      margin-bottom: 16px;
+    }
+
+    .category-card h3 {
+      font-size: 20px;
+      color: #ff6b6b;
+    }
+
+    footer {
+      background: #fff0e8;
+      padding: 30px 20px;
+      text-align: center;
+      font-size: 15px;
+      color: #7b665e;
+    }
+
+    @media (max-width: 768px) {
+      .hero-text h1 {
+        font-size: 42px;
+      }
+
+      .hero-text p {
+        font-size: 18px;
+      }
+
+      .hero-image img {
+        width: 100%;
+        aspect-ratio: auto;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <a href="#" class="logo">Dinu Cake</a>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="cakes.html">Cakes</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
+
+  <section class="hero" id="home">
+    <div class="hero-text">
+      <h1>Delight in Every Bite</h1>
+      <p>Freshly baked, lovingly crafted cakes for every occasion. Whether it's a birthday, wedding, or just because — Dinu Cake makes it sweet!</p>
+      <div class="hero-buttons">
+        <a href="order-now.html" class="btn order">Order Now</a>
+        <a href="cakes.html" class="btn menu">View Menu</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="category-section">
+    <h2>Choose Your Cake Category</h2>
+    <div class="category-cards">
+      <a href="birthday.html" class="category-card">
+        <img src="assets/R.jpeg" alt="Birthday Cake">
+        <h3>Birthday Cakes</h3>
+      </a>
+      <a href="anniversary-cakes.html" class="category-card">
+        <img src="assets/anniversary.jpg" alt="Anniversary Cake">
+        <h3>Anniversary Cakes</h3>
+      </a>
+      <a href="wedding.html" class="category-card">
+        <img src="assets/wedding.jpg" alt="Wedding Cake">
+        <h3>Wedding Cakes</h3>
+      </a>
+      <a href="other.html" class="category-card">
+        <img src="assets/others.jpg" alt="Other Cakes">
+        <h3>Other Cakes</h3>
+      </a>
+    </div>
+  </section>
+
+  <section class="section" id="cakes">
+    <h2>Our Best Cakes</h2>
+    <div class="cards">
+      <div class="card">
+        <img src="assets/chocalateover.jpeg" alt="Chocolate Cake">
+        <h3>Chocolate Overload</h3>
+        <p>Rich, creamy, and topped with love. A chocolate lover's dream!</p>
+      </div>
+      <div class="card">
+        <img src="assets/vanilla.jpeg" alt="Vanilla Cake">
+        <h3>Classic Vanilla</h3>
+        <p>Soft, moist and filled with smooth vanilla cream. Perfect for any celebration.</p>
+      </div>
+      <div class="card">
+        <img src="assets/straw.jpeg" alt="Strawberry Cake">
+        <h3>Berry Bliss</h3>
+        <p>Strawberry fresh and sweet, with a perfect balance of cream and fruit.</p>
+      </div>
+      <div class="card">
+        <img src="assets/Caramel-Crunch-Cake-Recipe-758x827.jpg" alt="Carrot Cake">
+        <h3>Carrot Dream</h3>
+        <p>Fluffy carrot cake with a rich cream cheese frosting. Healthy and heavenly!</p>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    &copy; 2025 Dinu Cake. All rights reserved.
+  </footer>
+
+</body>
+</html>
