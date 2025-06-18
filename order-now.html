@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dinu Cake | Order Now</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Raleway&display=swap" rel="stylesheet">
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: 'Raleway', sans-serif;
+      background: linear-gradient(135deg, #fffaf5, #ffe6e6);
+      color: #3a2f2f;
+      min-height: 100vh;
+    }
+
+    header {
+      background-color: #fff0e8;
+      padding: 20px 50px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      box-shadow: 0 2px 15px rgba(58, 47, 47, 0.1);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+
+    .logo {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 28px;
+      color: #ff6b6b;
+      font-weight: 700;
+    }
+
+    nav {
+      display: flex;
+      gap: 30px;
+    }
+
+    nav a {
+      color: #5b4a48;
+      font-weight: 600;
+      font-size: 16px;
+      position: relative;
+      text-decoration: none;
+    }
+
+    nav a:hover {
+      color: #ff6b6b;
+    }
+
+    main {
+      max-width: 640px;
+      margin: 40px auto 60px;
+      background: white;
+      border-radius: 20px;
+      padding: 40px 35px;
+      box-shadow: 0 10px 30px rgba(255, 107, 107, 0.25);
+    }
+
+    h1 {
+      text-align: center;
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 800;
+      color: #ff6b6b;
+      margin-bottom: 25px;
+      text-transform: uppercase;
+    }
+
+    label {
+      display: block;
+      margin-top: 25px;
+      font-weight: 600;
+      font-size: 15px;
+      color: #555;
+    }
+
+    select, input[type="text"], input[type="tel"], textarea {
+      width: 100%;
+      padding: 14px 18px;
+      margin-top: 8px;
+      border-radius: 12px;
+      border: 2px solid #f0f0f0;
+      font-size: 16px;
+      font-family: inherit;
+    }
+
+    select {
+      appearance: none;
+      background: url("data:image/svg+xml,%3Csvg fill='gray' height='24' viewBox='0 0 24 24' width='24' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M7 10l5 5 5-5z'/%3E%3C/svg%3E") no-repeat right 15px center;
+      background-size: 20px;
+    }
+
+    select:focus, input:focus, textarea:focus {
+      border-color: #ff6b6b;
+      box-shadow: 0 0 6px #ff6b6bcc;
+      outline: none;
+      background-color: #fff5f5;
+    }
+
+    textarea {
+      min-height: 100px;
+      resize: vertical;
+    }
+
+    #cakeImage {
+      display: block;
+      margin-top: 25px;
+      width: 100%;
+      border-radius: 16px;
+      box-shadow: 0 6px 18px rgba(255, 107, 107, 0.4);
+      opacity: 0;
+      transform: translateY(15px);
+      transition: all 0.4s ease;
+    }
+
+    #cakeImage.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    #cakePrice {
+      display: block;
+      margin-top: 10px;
+      font-weight: 600;
+      color: #444;
+    }
+
+    button {
+      margin-top: 35px;
+      width: 100%;
+      padding: 14px;
+      background: linear-gradient(135deg, #ff6b6b, #e55a5a);
+      border: none;
+      color: white;
+      font-weight: 700;
+      font-size: 18px;
+      border-radius: 14px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+
+    button:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 10px 25px rgba(255, 107, 107, 0.6);
+    }
+
+    button:active {
+      transform: scale(0.96);
+    }
+
+    @media (max-width: 640px) {
+      header { padding: 15px 20px; flex-direction: column; gap: 10px; }
+      nav { flex-wrap: wrap; gap: 15px; justify-content: center; }
+      main { margin: 30px 15px; padding: 30px 25px; }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="logo">Dinu Cake</div>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="cakes.html">Cakes</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
+
+  <main>
+    <h1>Order Your Cake</h1>
+    <form id="orderForm">
+      <label for="cakeSelect">Select Cake</label>
+      <select id="cakeSelect" name="cake" required>
+        <option value="" disabled selected>-- Choose a cake --</option>
+        <option value="Chocolate Overload" data-img="assets/chocalateover.jpeg">Chocolate Overload</option>
+        <option value="Vanilla Dream" data-img="assets/vanilla.jpeg">Vanilla Dream</option>
+        <option value="Red Velvet Love" data-img="assets/Red-Velvet-Love-Cake.jpeg">Red Velvet Love</option>
+        <option value="Strawberry Bliss" data-img="assets/straw.jpeg">Strawberry Bliss</option>
+        <option value="Mocha Delight" data-img="assets/mocha.webp">Mocha Delight</option>
+        <option value="Caramel Crunch" data-img="assets/Caramel-Crunch-Cake-Recipe-758x827.jpg">Caramel Crunch</option>
+        <option value="Lemon Zest" data-img="assets/essence-lemon-zest-cake_987388-2815.avif">Lemon Zest</option>
+        <option value="Nutella Swirl" data-img="assets/nutella.jpeg">Nutella Swirl</option>
+        <option value="Tropical Paradise" data-img="assets/trop.jpeg">Tropical Paradise</option>
+        <option value="Mint Choco Chill" data-img="assets/mint.jpeg">Mint Choco Chill</option>
+      </select>
+
+      <label id="cakePrice"></label>
+
+      <img id="cakeImage" src="" alt="Selected Cake Image" />
+
+      <label for="fullname">Full Name</label>
+      <input type="text" id="fullname" name="fullname" placeholder="Your full name" aria-label="Full Name" required />
+
+      <label for="phone">Phone Number</label>
+      <input type="tel" id="phone" name="phone" placeholder="Your phone number" pattern="[0-9]{10}" title="Enter 10-digit phone number" aria-label="Phone Number" required />
+
+      <label for="address">Delivery Address</label>
+      <textarea id="address" name="address" placeholder="Your delivery address" aria-label="Delivery Address" required></textarea>
+
+      <label for="message">Additional Message (Optional)</label>
+      <textarea id="message" name="message" placeholder="Any special requests?" aria-label="Additional Message"></textarea>
+
+      <button type="submit">Submit Order</button>
+    </form>
+  </main>
+
+  <script>
+    const cakeSelect = document.getElementById('cakeSelect');
+    const cakeImage = document.getElementById('cakeImage');
+    const cakePrice = document.getElementById('cakePrice');
+    const form = document.getElementById('orderForm');
+    const yourWhatsAppNumber = '94763561887';
+
+    const prices = {
+      "Chocolate Overload": "Rs. 3000",
+      "Vanilla Dream": "Rs. 2800",
+      "Red Velvet Love": "Rs. 3200",
+      "Strawberry Bliss": "Rs. 2900",
+      "Mocha Delight": "Rs. 3100",
+      "Caramel Crunch": "Rs. 3300",
+      "Lemon Zest": "Rs. 2700",
+      "Nutella Swirl": "Rs. 3500",
+      "Tropical Paradise": "Rs. 3400",
+      "Mint Choco Chill": "Rs. 3000"
+    };
+
+    cakeSelect.addEventListener('change', () => {
+      const selectedOption = cakeSelect.options[cakeSelect.selectedIndex];
+      const imgUrl = selectedOption.getAttribute('data-img');
+      const cakeName = selectedOption.value;
+
+      if (imgUrl) {
+        cakeImage.src = imgUrl;
+        cakeImage.alt = cakeName;
+        cakeImage.classList.add('visible');
+        cakePrice.textContent = `Price: ${prices[cakeName] || ''}`;
+      } else {
+        cakeImage.classList.remove('visible');
+        cakeImage.src = '';
+        cakeImage.alt = '';
+        cakePrice.textContent = '';
+      }
+    });
+
+    form.addEventListener('submit', function(e) {
+      e.preventDefault();
+
+      const cakeName = cakeSelect.options[cakeSelect.selectedIndex].text;
+      const fullname = form.fullname.value.trim();
+      const phone = form.phone.value.trim();
+      const address = form.address.value.trim();
+      const message = form.message.value.trim();
+
+      if (!cakeName || !fullname || !phone || !address) {
+        alert('Please fill in all required fields!');
+        return;
+      }
+
+      let whatsappMessage = `*New Cake Order*\n\n`;
+      whatsappMessage += `*Cake:* ${cakeName}\n`;
+      whatsappMessage += `*Name:* ${fullname}\n`;
+      whatsappMessage += `*Phone:* ${phone}\n`;
+      whatsappMessage += `*Address:* ${address}\n`;
+      if (message) whatsappMessage += `*Message:* ${message}\n`;
+
+      const encodedMessage = encodeURIComponent(whatsappMessage);
+      const whatsappURL = `https://wa.me/${yourWhatsAppNumber}?text=${encodedMessage}`;
+      window.open(whatsappURL, '_blank');
+
+      setTimeout(() => {
+        alert("Your order has been sent! We'll contact you soon.");
+      }, 1000);
+
+      form.reset();
+      cakeImage.classList.remove('visible');
+      cakePrice.textContent = '';
+    });
+  </script>
+
+</body>
+</html>
